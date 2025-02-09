@@ -6,51 +6,41 @@ public class Evento implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private String nome;
-	private String organizacao;
-	private String local;
-	private String data;
+	private String numero;
+	private String titulo;
+	private String reponsavel;
+	private String situacao;
 
-	public String getData() {
-		return data;
+	public String getNumero() {
+		return numero;
 	}
 
-	public void setData(String data) {
-		this.data = data;
+	public void setNumero(String numero) {
+		this.numero = numero;
 	}
 
-	private String horario;
-
-	public String getNome() {
-		return nome;
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
-	public String getOrganizacao() {
-		return organizacao;
+	public String getReponsavel() {
+		return reponsavel;
 	}
 
-	public void setOrganizacao(String organizacao) {
-		this.organizacao = organizacao;
+	public void setReponsavel(String reponsavel) {
+		this.reponsavel = reponsavel;
 	}
 
-	public String getLocal() {
-		return local;
+	public String getSituacao() {
+		return situacao;
 	}
 
-	public void setLocal(String local) {
-		this.local = local;
-	}
-
-	public String getHorario() {
-		return horario;
-	}
-
-	public void setHorario(String horario) {
-		this.horario = horario;
+	public void setSituacao(String situacao) {
+		this.situacao = situacao;
 	}
 
 }

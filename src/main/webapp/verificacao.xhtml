@@ -14,19 +14,17 @@
 	<h:form>
 		<h:panelGrid columns="2">
 			<p:outputLabel value="Número: " />
-			<p:inputText value="#{eventoBean.evento.nome}" />
+			<p:inputText value="#{eventoBean.evento.numero}" />
 
 			<p:outputLabel value="Título/Descrição: " />
-			<p:inputText value="#{eventoBean.evento.organizacao}" />
+			<p:inputText value="#{eventoBean.evento.titulo}" />
 
 			<p:outputLabel value="Responsável: " />
-			<p:inputText value="#{eventoBean.evento.local}" />
+			<p:inputText value="#{eventoBean.evento.reponsavel}" />
 
 			<p:outputLabel value="Situação: " />
-			<p:inputText value="#{eventoBean.evento.data}" />
+			<p:inputText value="#{eventoBean.evento.situacao}" />
 
-			<p:outputLabel value="Horário" />
-			<p:inputText value="#{eventoBean.evento.horario}" />
 			<p:commandButton value="Buscar Tarefas"
 				action="#{eventoBean.adicionarEvento}" />
 		</h:panelGrid>
