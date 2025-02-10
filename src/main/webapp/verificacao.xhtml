@@ -18,12 +18,20 @@
 
 			<p:outputLabel value="Título/Descrição: " />
 			<p:inputText value="#{eventoBean.evento.titulo}" />
-
+		</h:panelGrid>
+		<h:panelGrid columns="5">
 			<p:outputLabel value="Responsável: " />
-			<p:inputText value="#{eventoBean.evento.reponsavel}" />
+			<h:selectOneMenu>
+				<f:selectItem itemLabel="Osailton" itemValue="01" />
+				<f:selectItem itemValue="Junior" />
+			</h:selectOneMenu>
 
 			<p:outputLabel value="Situação: " />
-			<p:inputText value="#{eventoBean.evento.situacao}" />
+			<h:selectOneMenu>
+				<f:selectItem itemLabel="Em andamento" itemValue="01" />
+				<f:selectItem itemValue="Concluído" />
+			</h:selectOneMenu>
+			
 
 			<p:commandButton value="Buscar Tarefas"
 				action="#{eventoBean.adicionarEvento}" />
@@ -37,7 +45,6 @@
 		<p:column headerText="Título">#{e.organizacao}</p:column>
 		<p:column headerText="Responsável">#{e.local}</p:column>
 		<p:column headerText="Ações">#{e.data}</p:column>
-		<p:column headerText="Horário">#{e.horario}</p:column>
 	</p:dataTable>
 </h:body>
 </html>
