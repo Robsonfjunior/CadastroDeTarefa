@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Primeira Pagina</title>
+</h:head>
+<h:body>
+	<h1>Cadastrar Tarefa</h1>
+
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputText value="Título" />
+			<h:inputText />
+			<h:outputText value="Descrição" />
+			<h:inputTextarea />
+		</h:panelGrid>
+		<h:panelGrid columns="4">
+
+			<h:outputText value="Responsável" />
+			<h:selectOneMenu>
+				<f:selectItems value="#{responsavelBean.responsaveis}" var="resp"
+					itemLabel="#{resp.nome}" itemValue="#{resp.id}" />
+				<f:selectItems value="#{responsavelBean.responsaveis}" var="resp"
+					itemLabel="#{resp.nome}" itemValue="#{resp.id}" />
+            </h:selectOneMenu>
+
+			<h:outputText value="Prioridade" />
+			<h:selectOneMenu>
+				<f:selectItem itemLabel="01" itemValue="01" />
+				<f:selectItem itemValue="02" />
+				<f:selectItem itemValue="03" />
+			</h:selectOneMenu>
+		</h:panelGrid>
+		<h:panelGrid columns="2">
+			<h:outputText value="Deadline" />
+			<h:inputText />
+		</h:panelGrid>
+		<h:outputText value="" />
+		<h:commandButton value="Cadastrar" />
+
+	</h:form>
+
+</h:body>
+</html>

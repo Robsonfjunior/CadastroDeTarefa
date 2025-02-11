@@ -1,0 +1,5 @@
+br\com\projetoEstagio\dao\ResponsavelDAO.class
+br\com\projetoEstagio\model\Responsavel.class
+br\com\projetoEstagio\controller\EventoBean.class
+bean\ResponsavelBean.class
+br\com\projetoEstagio\model\Evento.class

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Consultar Tarefa</title>
+</h:head>
+<h:body>
+	<h1>Consultar Tarefas</h1>
+
+	<h:form>
+		<h:panelGrid columns="2">
+			<p:outputLabel value="Número: " />
+			<p:inputText value="#{eventoBean.evento.numero}" />
+
+			<p:outputLabel value="Título/Descrição: " />
+			<p:inputText value="#{eventoBean.evento.titulo}" />
+		</h:panelGrid>
+		<h:panelGrid columns="5">
+			<p:outputLabel value="Responsável: " />
+			<h:selectOneMenu>
+				<f:selectItem itemLabel="Osailton" itemValue="Osailton" />
+				<f:selectItem itemValue="Junior" />
+			</h:selectOneMenu>
+
+			<p:outputLabel value="Situação: " />
+			<h:selectOneMenu>
+				<f:selectItem itemLabel="Em andamento" itemValue="01" />
+				<f:selectItem itemValue="Concluído" />
+			</h:selectOneMenu>
+			
+
+			<p:commandButton value="Buscar Tarefas"
+				action="#{eventoBean.adicionarEvento}" />
+		</h:panelGrid>
+
+	</h:form>
+	<h1>Lista de Eventos</h1>
+
+	<p:dataTable value="#{eventoBean.eventos}" var="e" border="1">
+		<p:column headerText="Número">#{e.nome}</p:column>
+		<p:column headerText="Título">#{e.organizacao}</p:column>
+		<p:column headerText="Responsável">#{e.local}</p:column>
+		<p:column headerText="Ações">#{e.data}</p:column>
+	</p:dataTable>
+</h:body>
+</html>
